@@ -1,0 +1,59 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #333333;
+  font-weight: 400;
+}
+
+a {
+  color: #333333;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.l-header {
+  color: #333333;
+}
+
+.pc-none {
+  display: inherit;
+}
+@media screen and (min-width: 1080) {
+  .pc-none {
+    display: none;
+  }
+}
+
+.tb-none {
+  display: inherit;
+}
+@media screen and (min-width: 860) {
+  .tb-none {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+}
+@media screen and (max-width: 599) {
+  .sp-only {
+    display: inherit;
+  }
+}
+
+.p-top__hoge {
+  color: #333333;
+}
+/*# sourceMappingURL=style.css.map */

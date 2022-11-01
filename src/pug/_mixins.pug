@@ -1,0 +1,34 @@
+mixin pic(file, dsc="", rsp=false, minW=breakpoints.sp)
+  picture(class!=attributes.class)
+    - var param = ""
+    if attributes.ver
+      - param = "?v=" + attributes.ver
+    if !rsp
+      source(srcset= urls.img + file + ".webp" + param, type="image/webp")
+      source(srcset= urls.img + file + ".png" + param, type="image/png")
+      img(src= urls.img + file + ".png" + param, alt=dsc)
+    else
+      source(srcset= urls.img + file + ".webp" + param, type="image/webp", media="(min-width: "+minW+"px)")
+      source(srcset= urls.img + file + ".png" + param, type="image/png", media="(min-width: "+minW+"px)")
+      source(srcset= urls.img + file + "-sp.webp" + param, type="image/webp", media="(max-width: "+(minW-1)+"px)")
+      source(srcset= urls.img + file + "-sp.png" + param, type="image/png", media="(max-width: "+(minW-1)+"px)")
+      img(src= urls.img + file + ".png" + param, alt=dsc)
+
+mixin picSvg(file, dsc="", rsp=false, minW=pcW)
+  - var param = ""
+  if attributes.ver
+    - param = "?v=" + attributes.ver
+  picture(class!=attributes.class)
+    if !rsp
+      source(srcset= urls.img + file + ".svg" + param, type="image/svg+xml")
+      img(src= urls.img + file + ".svg", alt=dsc)
+    else
+      source(srcset= urls.img + file + ".svg" + param, type="image/svg+xml", media="(min-width: "+minW+"px)")
+      source(srcset= urls.img + file + ".svg" + param, type="image/svg+xml", media="(min-width: "+minW+"px)")
+      source(srcset= urls.img + file + "-sp.svg" + param, type="image/svg+xml", media="(max-width: "+(minW-1)+"px)")
+      source(srcset= urls.img + file + "-sp.svg" + param, type="image/svg+xml", media="(max-width: "+(minW-1)+"px)")
+      img(src= urls.img + file + ".svg" + param, alt=dsc)
+
+mixin useSvg(file, ...views)
+  svg(class!=attributes.class,  viewBox= views[0]+" "+views[1]+" "+views[2]+" "+views[3],width= views[2], height= views[3])
+    use(xlink:href= "#" + file)

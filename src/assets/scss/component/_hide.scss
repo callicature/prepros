@@ -1,0 +1,22 @@
+@use 'global' as *;
+
+.pc-none {
+  display: inherit;
+  @include mq(pc, up) {
+    display: none;
+  }
+}
+
+.tb-none {
+  display: inherit;
+  @include mq(tb, up) {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+  @include mq {
+    display: inherit;
+  }
+}

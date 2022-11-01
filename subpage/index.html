@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下層ページ</title>
+    <meta name="description" content="説明">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1666779185079">
+    <script src="../assets/lib/modernizr/modernizr-webp.js"></script>
+    <script src="../assets/js/bundle.js?v=1666779185079" defer></script>
+  </head>
+  <body class="subpage">
+    <header class="l-header">
+      <h1>Main Title</h1>
+    </header>
+    <main class="l-main">
+      <div class="swiper swiperTest">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="../assets/img/top/test.webp?v=1.0.1" type="image/webp" media="(min-width: 600px)"/>
+              <source srcset="../assets/img/top/test.png?v=1.0.1" type="image/png" media="(min-width: 600px)"/>
+              <source srcset="../assets/img/top/test-sp.webp?v=1.0.1" type="image/webp" media="(max-width: 599px)"/>
+              <source srcset="../assets/img/top/test-sp.png?v=1.0.1" type="image/png" media="(max-width: 599px)"/><img src="../assets/img/top/test.png?v=1.0.1" alt="テスト"/>
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="../assets/img/top/test.webp?v=1.0.1" type="image/webp"/>
+              <source srcset="../assets/img/top/test.png?v=1.0.1" type="image/png"/><img src="../assets/img/top/test.png?v=1.0.1" alt=""/>
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="../assets/img/top/test.webp?v=1.0.1" type="image/webp"/>
+              <source srcset="../assets/img/top/test.png?v=1.0.1" type="image/png"/><img src="../assets/img/top/test.png?v=1.0.1" alt=""/>
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="p-subpage">
+        <div class="p-subpage__foo">subpage</div>
+      </div>
+    </main>
+    <footer class="l-footer"><small>&copy;Copyright ***, All Rights Reserved.</small></footer>
+  </body>
+</html>

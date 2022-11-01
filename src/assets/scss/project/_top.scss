@@ -1,0 +1,8 @@
+@use 'sass:math';
+@use 'global' as *;
+
+.p-top {
+  &__hoge {
+    color: $color-black;
+  }
+}

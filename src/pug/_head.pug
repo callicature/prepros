@@ -1,0 +1,17 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title= title
+  meta(name='description',content=dsc)
+  //- meta(property="og:title",content=title)
+  //- meta(property="og:description",content=dsc)
+  //- meta(property="og:site_name",content=site_title)
+  //- meta(property="og:image", content= ogp_params.img)
+  //- meta(name="twitter:card",content= ogp_params.tw_card)
+
+  block addcss
+    link(rel="stylesheet", href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css")
+    link(rel="stylesheet" href= urls.assets + "css/style.css?v="+Date.now())
+  block addjs
+    script(src= urls.assets + "lib/modernizr/modernizr-webp.js")
+    script(src= urls.assets + "js/bundle.js?v=" + Date.now(),defer)

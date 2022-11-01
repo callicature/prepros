@@ -1,0 +1,27 @@
+@use 'sass:math';
+@use 'global' as *;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6rem;
+  //letter-spacing: 0.05em;
+  line-height: #{math.div(24, 15)};
+  color: $color-black;
+  font-weight: 400;
+}
+
+a {
+  color: $color-black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

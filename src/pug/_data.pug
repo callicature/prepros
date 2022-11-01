@@ -1,0 +1,27 @@
+- var title = "デフォルトタイトル"
+- var dsc = "デフォルト説明"
+- var site_title = "サイトタイトル"
+
+-
+  var breakpoints = {
+    "sp": 600,
+    "tb": 800,
+    "pc": 1080,
+    "pcL": 1440
+  }
+
+-
+  var urls = {
+    root: "./",
+    full: "https://google.com", //- フルパス
+  }
+if page != "top"
+  - urls.root = "../"
+- urls.assets = urls.root + "assets/"
+- urls.img = urls.assets + 'img/'
+
+-
+  var ogp_params = {
+    img: urls.full + "/assets/img/ogp.png",
+    tw_card: "summary"
+  }

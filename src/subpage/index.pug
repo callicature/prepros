@@ -1,0 +1,13 @@
+extend ../pug/_layout
+
+append value
+  - var page = "subpage"
+  include ../pug/_data
+  include ../pug/_mixins
+  - var title= "下層ページ"
+  - var dsc= "説明"
+
+block content
+  main.l-main
+    include ../pug/parts/common/_slider
+    include ../pug/parts/subpage/_foo
